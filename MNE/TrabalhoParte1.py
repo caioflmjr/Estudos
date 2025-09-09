@@ -65,7 +65,7 @@ plt.xlabel('Vetor x')
 plt.ylabel('Vetor y')
 plt.grid(True)
 
-plt.savefig('graficoexercicio4.png')
+plt.savefig('MNE/graficoexercicio4.png')
 
 plt.show()
 
