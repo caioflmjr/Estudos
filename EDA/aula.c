@@ -5,6 +5,7 @@ int main(int argc, char const *argv[])
 {
     FILE *fp;
     char ch;
+    int n = 0;
 
     fp = fopen("aula.c", "r");
     if (fp == NULL)
@@ -17,10 +18,16 @@ int main(int argc, char const *argv[])
     {
         ch = fgetc(fp);
         if (ch == EOF)
+        {
             break;
-
-        printf("%c", ch);
+        }
+        else
+        {
+            printf("%c", ch);
+            n++;
+        }
     }
+    printf("%d\n", n);
     fclose(fp);
     return 0;
 }
