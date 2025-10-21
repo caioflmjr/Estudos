@@ -1,0 +1,22 @@
+# Arquivo .gitignore para Projetos Python
+
+# Ambiente Virtual
+.venv/
+# Arquivos de distribuição
+.Python
+build/
+dist/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Arquivos temporários e de log
+*.log
+tmp/
+.coverage
+.tox/
+
+# IDEs e Editores
+# Visual Studio Code
+.vscode/
