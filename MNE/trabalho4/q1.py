@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 
-pasta_atual = Path('.') 
+pasta_atual = Path('/home/caio/Estudos/MNE/trabalho4/') 
 
 print("--- Conteúdo Completo (Usando Path) ---")
 filenames = []
@@ -19,7 +19,7 @@ tensao = np.array([])
        
 for name in filenames:
     print(f"Carregando dados do arquivo {name}")
-    valor1, valor2 = np.loadtxt(name, skiprows= 1, usecols=(0,1), unpack=True)
+    valor1, valor2 = np.loadtxt(f"{pasta_atual}/{name}", skiprows= 1, usecols=(0,1), unpack=True)
     deformacao = np.concatenate((deformacao, valor1))
     tensao = np.concatenate((tensao, valor2))
 
@@ -66,5 +66,5 @@ plt.legend(loc='best')
 plt.grid(True)
 
 # Salvar o gráfico (será mostrado acima)
-plt.savefig('curva_de_melhor_ajuste.png')
+plt.savefig('MNE/trabalho4/curva_de_melhor_ajuste.png')
 print("\nGráfico 'curva_de_melhor_ajuste.png' gerado com sucesso. Verifique o resultado acima.")
